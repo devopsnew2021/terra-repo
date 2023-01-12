@@ -3,8 +3,10 @@ provider "aws" {
 }
 terraform {
   backend "remote" {
-    organization = ""
-    workspaces {}
+    organization = "terracloudhimanshu"
+    workspaces {
+      name = "terra-repo"
+    }
   }
 
 }
