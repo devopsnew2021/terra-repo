@@ -15,3 +15,11 @@ terraform {
 resource "aws_iam_user" "terra-user-new" {
   name = "terra-user-new"
 }
+resource "aws_instance" "play-vm" {
+  ami = var.amiid
+  instance_type = var.inssize
+  key_name = "terrakey"
+  tags = {
+    Name = "terra-cloud-vm"
+  }
+}
